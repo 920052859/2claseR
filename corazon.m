@@ -1,0 +1,1 @@
+ContourPlot3D[(x^2+9/4 y^2+z^2-1)^3-x^2 z^3-9/80 y^2 z^3,{x,-3,3},{y,-3,3}, {z,-3,3},MaxRecursion->3,ViewPoint->{2.032,2.290,1.294},Axes->True,AxesLabel->{«Eje X», «Eje Y»,»Eje Z»}]

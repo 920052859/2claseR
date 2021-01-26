@@ -1,0 +1,25 @@
+clc;
+clear all;
+close all;
+T = 2;
+t = 0:0.25:5*T;
+
+%Respuesta escalon unitario 2do orden
+%C(S)/R(S)=K/(J*s^2+B*s+K)
+%K/J=wn^2
+%B/J=2*L*wn=2*delta
+%B_critico=2*sqrt(J*K)
+y1 = 1-exp(-t/T);
+
+%Respuesta rampa unitaria 2do orden
+y2 = t-T*(1-exp(-t/T));
+e2 = T*(1-exp(-t/T));
+
+%Respuesta impulso unitario 2do orden
+y3 = 1/T*(exp(-t/T));
+
+y = [y1;y2;e2;y3];
+
+hold on;
+grid on;
+plot(t,y);

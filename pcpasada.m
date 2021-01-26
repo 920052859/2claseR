@@ -1,0 +1,14 @@
+x=1:pi/500:pi;
+f=(log10(abs(tan((2*x/3)+3))+x))/log10(9);
+g=sqrt(1+((x).^(7/4)+abs((exp(2*x))/cos(2*x+3))^1.5));
+h=f.*g
+figure
+subplot(3,1,1)
+plot(x,f,'r')
+legend('f(x)')
+subplot(3,1,2)
+plot(x,g)
+legend('g(x)')
+subplot(3,1,3)
+plot(x,h)
+legend('h(x)')
